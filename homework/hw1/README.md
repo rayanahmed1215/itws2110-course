@@ -87,8 +87,11 @@ seed rows in `survey`. No manual SQL, no hand edits, no "oh, you also have to…
 ## Task 5 — Add a third service
 
 Add [Adminer](https://hub.docker.com/_/adminer) to `docker-compose.yml`: image `adminer:5`,
-published on `${ADMINER_PORT:-8081}`, waiting on `db` the same way `web` does. Open it,
-log in as `appuser`, and look at your table.
+published on `${ADMINER_PORT:-8081}`, waiting on `db` the same way `web` does. Open it and
+log in with the four things `web` also needs: server `db` (the service name — Adminer is on
+the same Compose network), username `appuser`, the password you set as `MYSQL_PASSWORD` in
+your `.env`, and database `app`. There is no other password; if you never changed it, it is
+still `change_me`, and that is worth fixing before you push. Then look at your table.
 
 This is four or five lines. The point is that a third service costs almost nothing once
 the first two are declared properly.
