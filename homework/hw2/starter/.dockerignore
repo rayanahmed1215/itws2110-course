@@ -1,0 +1,10 @@
+config/
+grocy/
+seed/
+tests/
+vendor/
+node_modules/
+test-results/
+playwright-report/
+.phpunit.cache/
+.git/

@@ -1,0 +1,149 @@
+# Translators:
+# Jonatan Nyberg, 2026
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-01T17:59:17+00:00\n"
+"PO-Revision-Date: 2020-08-31 19:11+0000\n"
+"Last-Translator: Jonatan Nyberg, 2026\n"
+"Language-Team: Swedish (Sweden) (https://app.transifex.com/grocy/teams/93189/sv_SE/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: grocy/locales\n"
+
+# Czech
+msgid "cs"
+msgstr "Tjeckiska"
+
+# Danish
+msgid "da"
+msgstr "Danska"
+
+# German
+msgid "de"
+msgstr "Tyska"
+
+# Greek
+msgid "el_GR"
+msgstr "Grekiska"
+
+# English
+msgid "en"
+msgstr "Engelska"
+
+# English (Great Britain)
+msgid "en_GB"
+msgstr "Engelska (Storbritannien)"
+
+# Spanish
+msgid "es"
+msgstr "Spanska"
+
+# French
+msgid "fr"
+msgstr "Franska"
+
+# Hungarian
+msgid "hu"
+msgstr "Ungerska"
+
+# Italian
+msgid "it"
+msgstr "Italienska"
+
+# Japanese
+msgid "ja"
+msgstr "Japanska"
+
+# Korean
+msgid "ko_KR"
+msgstr "Koreanska"
+
+# Dutch
+msgid "nl"
+msgstr "Nederländska"
+
+# Norwegian
+msgid "no"
+msgstr "Norska"
+
+# Polish
+msgid "pl"
+msgstr "Polska"
+
+# Portuguese (Brazil)
+msgid "pt_BR"
+msgstr "Portugisiska (Brasilien)"
+
+# Portuguese (Portugal)
+msgid "pt_PT"
+msgstr "Portugisiska (Portugal)"
+
+# Russian
+msgid "ru"
+msgstr "Ryska"
+
+# Slovak
+msgid "sk_SK"
+msgstr "Slovakiska"
+
+# Slovenian
+msgid "sl"
+msgstr "Slovenska"
+
+# Swedish
+msgid "sv_SE"
+msgstr "Svenska"
+
+# Turkish
+msgid "tr"
+msgstr "Turkiska"
+
+# Chinese (Taiwan)
+msgid "zh_TW"
+msgstr "Kinesiska (Taiwan)"
+
+# Chinese (China)
+msgid "zh_CN"
+msgstr "Kinesiska (Kina)"
+
+# Hebrew (Israel)
+msgid "he_IL"
+msgstr "Hebreiska (Israel)"
+
+# Tamil
+msgid "ta"
+msgstr "Tamil"
+
+# Finnish
+msgid "fi"
+msgstr "Finska"
+
+# Catalan
+msgid "ca"
+msgstr "Katalanska"
+
+# Lithuanian
+msgid "lt"
+msgstr "Litauiska"
+
+# Ukrainian
+msgid "uk"
+msgstr "Ukrainska"
+
+# Romanian
+msgid "ro_RO"
+msgstr "Rumänska"
+
+# Estonian
+msgid "et_EE"
+msgstr "Estniska"
+
+# Bulgarian
+msgid "bg_BG"
+msgstr "Bulgariska"

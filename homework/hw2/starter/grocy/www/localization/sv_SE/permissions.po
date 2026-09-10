@@ -1,0 +1,137 @@
+# Translators:
+# Jonatan Nyberg, 2026
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-01T17:59:17+00:00\n"
+"PO-Revision-Date: 2020-08-29 16:33+0000\n"
+"Last-Translator: Jonatan Nyberg, 2026\n"
+"Language-Team: Swedish (Sweden) (https://app.transifex.com/grocy/teams/93189/sv_SE/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: grocy/permissions\n"
+
+# All permissions
+msgid "ADMIN"
+msgstr "Alla behörigheter"
+
+# Create users
+msgid "USERS_CREATE"
+msgstr "Skapa användare"
+
+# Edit users (including passwords)
+msgid "USERS_EDIT"
+msgstr "Redigera användare (inklusive lösenord)"
+
+# Show users
+msgid "USERS_READ"
+msgstr "Visa användare"
+
+# Edit own user data / change own password
+msgid "USERS_EDIT_SELF"
+msgstr "Redigera egna användaruppgifter och ändra eget lösenord"
+
+# Undo charge cycle
+msgid "BATTERIES_UNDO_CHARGE_CYCLE"
+msgstr "Ångra laddningscykel"
+
+# Track charge cycle
+msgid "BATTERIES_TRACK_CHARGE_CYCLE"
+msgstr "Registrera laddningscykel"
+
+# Track execution
+msgid "CHORE_TRACK_EXECUTION"
+msgstr "Registrera utförande"
+
+# Undo execution
+msgid "CHORE_UNDO_EXECUTION"
+msgstr "Ångra utförande"
+
+# Edit master data
+msgid "MASTER_DATA_EDIT"
+msgstr "Redigera grunddata"
+
+# Undo execution
+msgid "TASKS_UNDO_EXECUTION"
+msgstr "Ångra utförande"
+
+# Mark completed
+msgid "TASKS_MARK_COMPLETED"
+msgstr "Markera som slutförd"
+
+# Edit stock entries
+msgid "STOCK_EDIT"
+msgstr "Redigera lagerposter"
+
+# Transfer
+msgid "STOCK_TRANSFER"
+msgstr "Överför"
+
+# Inventory
+msgid "STOCK_INVENTORY"
+msgstr "Inventera"
+
+# Consume
+msgid "STOCK_CONSUME"
+msgstr "Förbruka"
+
+# Open products
+msgid "STOCK_OPEN"
+msgstr "Markera produkter som öppnade"
+
+# Purchase
+msgid "STOCK_PURCHASE"
+msgstr "Inköp"
+
+# Add items
+msgid "SHOPPINGLIST_ITEMS_ADD"
+msgstr "Lägg till varor"
+
+# Remove items
+msgid "SHOPPINGLIST_ITEMS_DELETE"
+msgstr "Ta bort varor"
+
+# User management
+msgid "USERS"
+msgstr "Användarhantering"
+
+# Stock
+msgid "STOCK"
+msgstr "Lager"
+
+# Shopping list
+msgid "SHOPPINGLIST"
+msgstr "Inköpslista"
+
+# Chores
+msgid "CHORES"
+msgstr "Sysslor"
+
+# Batteries
+msgid "BATTERIES"
+msgstr "Batterier"
+
+# Tasks
+msgid "TASKS"
+msgstr "Uppgifter"
+
+# Recipes
+msgid "RECIPES"
+msgstr "Recept"
+
+# Equipment
+msgid "EQUIPMENT"
+msgstr "Utrustning"
+
+# Calendar
+msgid "CALENDAR"
+msgstr "Kalender"
+
+# Meal plan
+msgid "RECIPES_MEALPLAN"
+msgstr "Måltidsplan"

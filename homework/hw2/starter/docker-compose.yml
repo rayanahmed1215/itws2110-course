@@ -1,0 +1,78 @@
+# Grocy, plus ONE image of test tools -- built from the same lines as the
+# week-3 Pantry image (Playwright + PHP + PHPUnit), so nothing new to download.
+#
+#   docker compose watch            Grocy at http://localhost:9283, built from grocy/www; edits sync in
+#   docker compose run --rm unit    PHPUnit on Grocy's own code     (grocy/www, the same tree)
+#   docker compose run --rm api     Playwright  tests/api           (no browser)
+#   docker compose run --rm e2e     Playwright  tests/e2e           (Chromium)
+#   docker compose down             stop.  Grocy's database is config/data/grocy.db; delete it to start over.
+
+x-tests: &tests
+  build: .
+  image: hw2-tests
+  volumes:
+    - ./tests:/app/tests                 # your tests, live
+    - ./grocy/www:/app/grocy-src         # Grocy's source: the app you run is the code you test
+    - ./test-results:/app/test-results   # screenshots and traces of failures
+  environment:
+    BASE_URL: http://grocy               # service-name DNS: the tests reach Grocy by its service name
+  profiles: [test]                       # one-shot jobs: run with `run --rm`; watch leaves them alone
+
+services:
+  # The thing under test. A real application, pinned to one version so the
+  # tests you write today still pass in December.
+  # The thing under test. A real application, pinned to one version so the
+  # tests you write today still pass in December. Built from grocy/Dockerfile:
+  # the pinned image, with the source in grocy/www laid over it, plus our boot
+  # hook and a starting database with demo data in it.
+  grocy:
+    build: ./grocy
+    image: hw2-grocy
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: America/New_York
+    volumes:
+      - ./config:/config                       # Grocy's data and generated config live here
+    ports:
+      - "${GROCY_PORT:-9283}:80"
+    healthcheck:
+      # "Started" is not "ready": on first boot Grocy is still building its
+      # database for a while. Nothing else starts until this answers.
+      test: ["CMD", "curl", "-fs", "http://localhost/api/objects/locations"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+      start_period: 20s
+    develop:
+      watch:
+        - action: sync                       # edit Grocy's PHP or views: copied straight into the running app
+          path: ./grocy/www
+          target: /app/www
+        - action: sync+restart               # edit the boot hook: Grocy restarts and re-runs it
+          path: ./grocy/init
+          target: /custom-cont-init.d
+        - action: rebuild
+          path: ./grocy/Dockerfile
+
+  # Unit tests on Grocy's own PHP, the way Chojrin's chapter 7 does it: point
+  # PHPUnit at one class at a time. The classes live in grocy/www.
+  unit:
+    <<: *tests
+    command: ./vendor/bin/phpunit --testdox
+
+  # API tests: Playwright's request fixture, no browser.
+  api:
+    <<: *tests
+    depends_on:
+      grocy:
+        condition: service_healthy
+    command: npx playwright test tests/api
+
+  # Browser tests: Playwright + Chromium.
+  e2e:
+    <<: *tests
+    depends_on:
+      grocy:
+        condition: service_healthy
+    command: npx playwright test tests/e2e

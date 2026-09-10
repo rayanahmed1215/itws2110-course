@@ -1,0 +1,17 @@
+.env
+config/*
+!config/.gitkeep
+config/data/*.db
+config/data/*.db-*
+config/keys/
+config/log/
+config/nginx/
+config/php/
+config/www/
+# grocy/seed/grocy.db IS committed: it is the empty, migrated database the hook copies in.
+node_modules/
+test-results/
+playwright-report/
+vendor/
+.phpunit.result.cache
+.phpunit.cache/
