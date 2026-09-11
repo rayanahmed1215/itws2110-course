@@ -5,8 +5,7 @@ use PHPUnit\Framework\TestCase;
 
 // One working unit test on Grocy's own code. Grocycode::Validate() is a pure
 // function -- string in, boolean out, no database, no globals -- which is why
-// it is the right place to start. (Chojrin starts with UrlManager, which has
-// both a global constant and $_SERVER in it. That is Task 2's stretch.)
+// it is the right place to start.
 //
 // The format, from the docblock in grocy/www/helpers/Grocycode.php:
 //   grcy : <type> : <id> [ : extra ... ]
