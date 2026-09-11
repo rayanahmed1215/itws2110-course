@@ -30,7 +30,7 @@
 --     something to average before any real person submits. Make them obviously
 --     fake -- this table will hold classmates' real answers.
 
-USE app;
+USE app;   -- already exists: MYSQL_DATABASE in .env created it before this ran
 
 -- YOUR CREATE TABLE HERE
 

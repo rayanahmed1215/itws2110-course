@@ -5,11 +5,15 @@
 #   web   build: ./docker/php-apache
 #         publishes ${APP_PORT:-8080} to container port 80
 #         receives DB_HOST / DB_NAME / DB_USER / DB_PASSWORD in its environment
+#           (src/db/config.php reads those names; the values come from .env:
+#            DB_USER: ${MYSQL_USER}   DB_PASSWORD: ${MYSQL_PASSWORD}   DB_NAME: ${MYSQL_DATABASE})
 #         must not start before the database is HEALTHY -- a healthcheck plus
 #           depends_on: condition: service_healthy, not depends_on alone
 #         a develop.watch block that syncs ./src into /var/www/html
 #
 #   db    build: ./docker/mysql
+#         receives MYSQL_ROOT_PASSWORD / MYSQL_DATABASE / MYSQL_USER / MYSQL_PASSWORD
+#           from .env -- the official image creates that database and user on first start
 #         a named volume for /var/lib/mysql
 #         a healthcheck (mysqladmin ping, as in Example 6's mongo healthcheck)
 #         publishes NO ports. Nothing outside Docker should reach it.

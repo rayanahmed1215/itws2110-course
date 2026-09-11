@@ -29,6 +29,8 @@ Copying the files across in Finder or Explorer works just as well. Your write-up
 |---|---|
 | **Given, complete** | `src/` — `index.html`, `styles.css`, `app.js`, `submit.php`, `db/config.php`, `db/connect.php`. The application. Read `submit.php` and `db/config.php`; do not edit them. |
 | **You write** | `docker/mysql/Dockerfile` · `docker/mysql/init.sql` · `docker/php-apache/Dockerfile` · `docker-compose.yml` |
+| **You copy** | `.env.example` → `.env`, then change the password. `.env` is gitignored; the four `MYSQL_*` values in it are what both `db` and `web` read. |
+| **You fill in** | `WRITEUP.md` (Task 6) |
 
 Each stub tells you exactly what it needs and which in-class example shows the pattern.
 
